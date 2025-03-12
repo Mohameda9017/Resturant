@@ -220,7 +220,7 @@ body, html {
 
     .slider img {
         object-fit: contain;  /* Allow images to fully show without being cropped */
-        width: 100%;  /* Make images responsive */
+        width: 100%;  /* Make imaes responsive */
         height: auto;
     }
 }
