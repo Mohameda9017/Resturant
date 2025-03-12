@@ -1,0 +1,211 @@
+/* General styles for body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%; /* Ensure full height for the page */
+    box-sizing: border-box; /* Include padding and border in the width/height */
+}
+
+/* Logo container styles */
+.logo {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    padding: 10px 0; /* Padding for space around the logo */
+}
+
+.navbar {
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-family: Verdana, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.section {
+    width: 100%;
+    height: calc(100vh - 120px); 
+    overflow: hidden; 
+}
+
+.pasta {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        gap: 1rem;
+        font-size: 1rem;
+    }
+    
+    .logo img {
+        width: 150px;
+    }
+    
+    .section {
+        height: calc(100vh - 80px);
+    }
+}
+.content {
+    position: absolute; 
+    top: 50%; 
+    left: 2%; 
+    transform: translateY(-50%); 
+    color: white; 
+    font-size: 2rem; 
+    font-weight: bold;
+    text-align: left;
+    z-index: 2; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 2%;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: white;
+    font-style: italic;
+}
+
+.navbar ul li a:hover {
+    color: red;
+}
+
+
+/* Menu Section */
+.menu-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.menu-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.menu-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(54, 3, 208, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: scale(1.05);
+}
+
+.menu-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.menu-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.menu-card p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.menu-card span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e76f51;
+}
+
+.menu-section h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* For gallery section  */
+.slider-wrapper
+{
+    position: relative; 
+    max-width: 48rem;
+    margin: 0 auto;
+
+}
+
+
+.slider 
+{
+    display: flex; 
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+.slider img
+{
+    flex: 1 0 100%; 
+    scroll-snap-type: start;
+    object-fit: cover;
+}
+
+.slider-nav
+{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+}
+
+.slider-nav a
+{
+    width: 0.5rem; 
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #ffff;
+    opacity: 0.75;
+    transition: opacity ease 250ms; 
+
+
+}
