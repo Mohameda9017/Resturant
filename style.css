@@ -178,7 +178,7 @@ body, html {
 
 .slider {
     display: flex; 
-    aspect-ratio: 16/9;
+    aspect-ratio: unset;  /* Remove fixed aspect ratio */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -187,9 +187,10 @@ body, html {
 }
 
 .slider img {
-    flex: 1 0 100%; 
-    scroll-snap-type: start;
-    object-fit: cover;
+    flex: 1 0 auto;  /* Allow image to take full width of container */
+    width: 100%;  /* Ensure the images stretch fully across the width of the container */
+    height: auto;  /* Maintain aspect ratio without distortion */
+    object-fit: cover;  /* Ensure images cover the container area */
 }
 
 .slider-nav {
@@ -203,10 +204,23 @@ body, html {
 }
 
 .slider-nav a {
-    width: 0.6rem;  /* Adjusted sizefor mobile */
+    width: 0.6rem;  /* Adjusted size for mobile */
     height: 0.6rem;
     border-radius: 50%;
     background-color: #ffff;
     opacity: 0.75;
     transition: opacity ease 250ms; 
+}
+
+/* Add more responsive behavior */
+@media (max-width: 768px) {
+    .slider {
+        aspect-ratio: unset; /* Reset aspect ratio on small screens */
+    }
+
+    .slider img {
+        object-fit: contain;  /* Allow images to fully show without being cropped */
+        width: 100%;  /* Make images responsive */
+        height: auto;
+    }
 }
