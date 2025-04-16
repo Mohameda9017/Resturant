@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bolzano Gallery</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <div class="navdiv">
         <div class="logo">
-            <a href = "https://mohameda9017.github.io/Resturant/"><img src="bolzano logo.png" alt="Image of the Bolzano logo"></a>
+            <a href="https://mohameda9017.github.io/Resturant/"><img src="bolzano logo.png" alt="Image of the Bolzano logo"></a>
         </div>
         <div class="navbar">
             <ul>
@@ -19,6 +18,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="cart-toggle">Cart (0)</a></li>
             </ul>
         </div>
     </div>
@@ -45,32 +45,48 @@
     </section>
 
     <!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-content">
-        <!-- Social Media Links -->
-        <div class="social-media">
-            <h3>Follow Us</h3>
-            <ul>
-                <li><a href="https://facebook.com/bolzano" target="_blank" aria-label="Facebook">Facebook</a></li>
-                <li><a href="https://instagram.com/bolzano" target="_blank" aria-label="Instagram">Instagram</a></li>
-                <li><a href="https://twitter.com/bolzano" target="_blank" aria-label="Twitter">Twitter</a></li>
-            </ul>
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://facebook.com/bolzano" target="_blank" aria-label="Facebook">Facebook</a></li>
+                    <li><a href="https://instagram.com/bolzano" target="_blank" aria-label="Instagram">Instagram</a></li>
+                    <li><a href="https://twitter.com/bolzano" target="_blank" aria-label="Twitter">Twitter</a></li>
+                </ul>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="business-hours">
+                <h3>Business Hours</h3>
+                <ul>
+                    <li><strong>Mon-Fri:</strong> 11:00 AM - 10:00 PM</li>
+                    <li><strong>Sat-Sun:</strong> 10:00 AM - 11:00 PM</li>
+                </ul>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>&copy; 2025 Bolzano. All rights reserved.</p>
+            </div>
         </div>
+    </footer>
 
-        <!-- Business Hours -->
-        <div class="business-hours">
-            <h3>Business Hours</h3>
-            <ul>
-                <li><strong>Mon-Fri:</strong> 11:00 AM - 10:00 PM</li>
-                <li><strong>Sat-Sun:</strong> 10:00 AM - 11:00 PM</li>
-            </ul>
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button id="close-cart" aria-label="Close Cart">&times;</button>
         </div>
-
-
-    <!-- Copyright -->
-    <div class="copyright">
-        <p>&copy; 2025 Bolzano. All rights reserved.</p>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-footer">
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button id="clear-cart">Clear Cart</button>
+        </div>
     </div>
-</footer>
+
+    <!-- Cart JS -->
+    <script src="cart.js"></script>
 </body>
 </html>
